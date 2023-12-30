@@ -9,7 +9,7 @@ const displayInstallButton = () => {
   displayCount++;
   setTimeout(() => {
     installButton.style.display = 'none';
-  }, 9000); // Display the button for 3 seconds
+  }, 3000); // Display the button for 3 seconds
 };
 
 // Event listener for the beforeinstallprompt event
