@@ -19,7 +19,7 @@ body {
   background-color: #1a1d24;
   border-radius: 10px;
   position: fixed;
-  top: 50%;
+  top: 45%;
   left: 50%;
   padding: 10px;
   width: 90%;
@@ -39,16 +39,23 @@ body {
   position: relative;
 }
 
-h1 {
+header {
+  background-color: #333;
+  padding: 20px;
   text-align: center;
-  color: #61dafb; /* Header text color */
+}
+
+
+header h1 {
+  color: #61dafb;
+  font-size: 2em;
 }
 
 label {
   display: block;
   margin: 15px auto;
   text-align: center;
-  color: #ffffff; /* Label text color */
+  color: #ffffff; 
 }
 
 #websiteInput {
@@ -148,7 +155,7 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
-  color: #ffffff; /* Paragraph text color */
+  color: #989696; /* Paragraph text color */
 }
 
 p {
