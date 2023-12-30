@@ -1,0 +1,19 @@
+#installButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50px;
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    background-image: url('../../assets/images/download.png'); /* Replace with your image file path */
+    background-size: cover;
+    cursor: pointer;
+    border: none; /* Remove default button border */
+    outline: none; /* Remove outline on focus */
+  }
+  
+  #installButton:hover {
+    opacity: 0.8; /* Add a hover effect, adjust opacity as needed */
+  }
+  
