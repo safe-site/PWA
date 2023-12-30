@@ -1,15 +1,10 @@
-let deferredPrompt; // Declare the variable
-let displayCount = 0;
+let deferredPrompt;
 let appInstalled = false;
 
 // Function to display the install button
 const displayInstallButton = () => {
   const installButton = document.getElementById('installButton');
   installButton.style.display = 'block';
-  displayCount++;
-  setTimeout(() => {
-    installButton.style.display = 'none';
-  }, 3000); // Display the button for 3 seconds
 };
 
 // Event listener for the beforeinstallprompt event
@@ -20,7 +15,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
   // Store the event for later use
   deferredPrompt = event;
 
-  // Display your custom install button
+  // Display your custom install button (or prompt) based on user interaction
   displayInstallButton();
 });
 
@@ -42,11 +37,12 @@ document.getElementById('installButton').addEventListener('click', () => {
   });
 });
 
-// Display the install button every 10 seconds until the app is installed
-const displayInterval = setInterval(() => {
-  if (!appInstalled) {
-    displayInstallButton();
-  } else {
-    clearInterval(displayInterval);
-  }
-}, 10000); // Display every 10 seconds
+// Additional logic to trigger the display of the install button based on user interaction
+document.addEventListener('DOMContentLoaded', () => {
+  // Example: Show the install button after the user clicks on a specific element
+  document.getElementById('userInteractionElement').addEventListener('click', () => {
+    if (!appInstalled) {
+      displayInstallButton();
+    }
+  });
+});
