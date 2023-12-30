@@ -3,35 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="src/styles/styles.css">
-    
-    <!-- PWA opn -->
-    <link rel="stylesheet" href="PWA/src/styles/install-btn.css">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="theme-color" content="#000000">
-<link rel="manifest" href="PWA/manifest.json">
-<!-- PWA clz -->
 
-    <title>PWA</title>
+     <!-- PWA opn -->
+     <link rel="stylesheet" href="PWA/src/styles/install-btn.css">
+     <meta name="apple-mobile-web-app-capable" content="yes">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black">
+ <meta name="theme-color" content="#000000">
+ <link rel="manifest" href="PWA/manifest.json">
+ <!-- PWA clz -->
+ 
+    <title>Redirect</title>
 </head>
-<body>
-    
-    
-    <h1>URL Redirector</h1>
-    <div class="middle">
-    <label for="websiteInput">Enter Website URL:</label>
-    <input type="text" id="websiteInput" placeholder="https://example.com">
-    <button onclick="saveAndRedirect()">Save and Redirect</button>
-</div>
 
-<footer>
-    <p>This tool allows you to save a website URL locally and redirect to it later. If you want to clear the saved URL, you can do so through your browser settings.</p>
-</footer>
+     <!-- PWA opn -->
+     <button id="installButton" style="display: none;"></button>
+     <!-- PWA clz -->
 
-
-
-    <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+     <div id="loadingSpinner" class="loading-spinner" style="display: none;">
         <div class="lds-ring">
             <div></div>
             <div></div>
@@ -40,16 +30,10 @@
         </div>
     </div>
 
-    
-
-    <!-- PWA opn -->
-  <button id="installButton" style="display: none;"></button>
-  <!-- PWA clz -->
-    
-  <!-- PWA opn -->
-  <script src="PWA/src/scripts/register-service-worker.js"></script>
-    <script src="PWA/src/scripts/install-btn.js"></script>
-    <!-- PWA clz -->
+<!-- PWA opn -->
+<script src="PWA/src/scripts/register-service-worker.js"></script>
+<script src="PWA/src/scripts/install-btn.js"></script>
+<!-- PWA clz -->
     <script src="src/scripts/script.js"></script>
 </body>
 </html>
