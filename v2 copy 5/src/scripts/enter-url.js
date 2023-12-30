@@ -17,7 +17,7 @@ function saveAndRedirect() {
 }
 
 function isValidUrl(url) {
-    var pattern = /^((https?|ftp):\/\/|www\.)[^\s\/$.?#].[^\s]*(:\d+)?(\/?[^\s]*)?(\?.*)?$/i;
+    var pattern = /^(http|https):\/\/[^ "]+$/;
     return pattern.test(url);
 }
 
@@ -30,6 +30,6 @@ window.onload = function () {
         // Redirect after a short delay (simulating loading)
         setTimeout(function() {
             window.location.href = savedUrl;
-        }, 10);
+        }, 1000);
     }
 };
